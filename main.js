@@ -1,6 +1,13 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 
+// Windows 任务栏显示名称
+app.setName('实时翻译');
+// Windows 任务栏应用 ID（防止被归到 Electron 通用图标下）
+if (process.platform === 'win32') {
+  app.setAppUserModelId('com.translator.enzh');
+}
+
 let mainWindow;
 
 function createWindow() {

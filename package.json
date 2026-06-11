@@ -1,7 +1,8 @@
 {
   "name": "translator-en-zh",
   "version": "1.0.0",
-  "description": "实时英译中桌面翻译器",
+  "description": "中英文实时双向翻译器",
+  "productName": "实时翻译",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
