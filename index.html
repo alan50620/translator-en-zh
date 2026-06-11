@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>实时翻译</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <!-- 顶部状态栏 -->
+    <div id="status-bar">
+      <span id="status-icon">🟢</span>
+      <span id="status-text">就绪</span>
+      <span id="direction-indicator">EN → 中</span>
+    </div>
+
+    <!-- 输入区 -->
+    <div class="panel input-panel">
+      <div class="panel-header">
+        <span class="lang-tag" id="input-lang-tag">EN</span>
+        <span class="panel-label" id="input-label">英文输入</span>
+      </div>
+      <textarea
+        id="input-area"
+        placeholder="在这里输入英文，实时翻译成中文..."
+        autofocus
+      ></textarea>
+    </div>
+
+    <!-- 方向切换 -->
+    <div id="divider">
+      <button id="btn-swap" title="切换翻译方向">
+        <span id="arrow">↓</span>
+      </button>
+    </div>
+
+    <!-- 输出区 -->
+    <div class="panel output-panel">
+      <div class="panel-header">
+        <span class="lang-tag" id="output-lang-tag">中</span>
+        <span class="panel-label" id="output-label">中文翻译</span>
+        <button id="btn-copy" title="复制翻译结果">📋 复制</button>
+      </div>
+      <div id="output-area">
+        <span id="output-placeholder">翻译结果将在这里显示...</span>
+        <span id="output-text"></span>
+      </div>
+    </div>
+
+    <!-- 底部信息栏 -->
+    <div id="footer">
+      <span id="char-count">0 字符</span>
+      <span id="engine-info">翻译引擎: MyMemory</span>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
